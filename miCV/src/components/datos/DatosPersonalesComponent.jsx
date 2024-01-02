@@ -3,12 +3,18 @@ import styles from './DatosPersonales.module.css';
 export const DatosPersonales = (props) => {
     return (
         <>
-            <h1>Datos Personales</h1>
             {
                 props.personalInfo.name ?
                     <>
-                        <h2>Nombre y Apellido</h2>
-                        {props.personalInfo.name} {props.personalInfo.lastName}
+                        <h1>{props.personalInfo.name} {props.personalInfo.lastName}</h1>
+                    </>
+                    :
+                    <></>
+            }
+            {
+                props.title ?
+                    <>
+                        <h2>{props.title.title} en {props.title.company}</h2>
                     </>
                     :
                     <></>
