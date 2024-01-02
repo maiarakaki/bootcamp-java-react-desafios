@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 import { toIntArray, tokenize, validDate } from "../app-utils/utils";
+import { FechaEsValida } from "./ui/FechaEsValida";
+import { FechaEsInvalida } from "./ui/FechaEsInvalida";
 
 export const FechaValidaComponent = () =>{
     const [userInput, setUserInput] = useState('23/12/2022');
@@ -26,13 +28,9 @@ export const FechaValidaComponent = () =>{
         </button>
         {
             fechaValida ?
-            <>
-                Fecha valida wiii
-            </>
+            <FechaEsValida />
             :
-            <>
-                Fecha inválida buuuu
-            </>
+            <FechaEsInvalida />
         }
         </>
     );
