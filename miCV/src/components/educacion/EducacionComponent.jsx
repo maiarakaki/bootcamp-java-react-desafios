@@ -1,3 +1,5 @@
+import styles from './EducacionComponent.module.css';
+
 export const EducacionComponent =(props) => {
     return (
         <>
