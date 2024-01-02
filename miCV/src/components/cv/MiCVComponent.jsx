@@ -1,6 +1,6 @@
 import { DatosPersonales } from "../datos/DatosPersonalesComponent"
 import { EducacionComponent } from "../educacion/EducacionComponent"
-import { ExperienciaComponent } from "../experiencia/ExperienciaComponent"
+import { ExperienciaLaboralComponent } from "../experiencia/ExperienciaLaboralComponent";
 import { FotoComponent } from "../foto/FotoComponentComponent"
 
 function MiCVComponent(props){
@@ -13,7 +13,7 @@ function MiCVComponent(props){
         <hr/>
         <EducacionComponent education={props.data.education}/>
         <hr/>
-        <ExperienciaComponent experience={props.data.experience}/>
+        <ExperienciaLaboralComponent experience={props.data.experience}/>
         </>
     )
 }

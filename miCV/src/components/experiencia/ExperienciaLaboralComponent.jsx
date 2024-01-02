@@ -1,13 +1,13 @@
 import { ExperienciaComponent } from "./ExperienciaComponent"
 
-export const ExperienciaLaboralComponent = () => {
+export const ExperienciaLaboralComponent = (props) => {
+    console.log(props);
     return (
         <>
-            Experiencia Laboral
-            <ExperienciaComponent />
-            <ExperienciaComponent />
-            <ExperienciaComponent />
-            <ExperienciaComponent />
+            <h1>Experiencia Laboral</h1>
+            {props.experience.map((exp) => (
+                <ExperienciaComponent experience={exp} key={exp.index} />
+            ))}
         </>
     )
 }

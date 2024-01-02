@@ -19,18 +19,21 @@ function App() {
     },
     experience: [
       {
+        title:"tituloX",
         company:"Empresa1",
         description:"tareas blablabla",
         dateStart:"AAAA-MM",
         dateFinish:"AAAA-MM"
       },
       {
+        title:"tituloY",
         company:"Empresa2",
         description:"tareas blablabla",
         dateStart:"AAAA-MM",
         dateFinish:"AAAA-MM"
       },
       {
+        title:"tituloZ",
         company:"Empresa3",
         description:"tareas blablabla",
         dateStart:"AAAA-MM",
