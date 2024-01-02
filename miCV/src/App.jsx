@@ -4,6 +4,7 @@ import MiCVComponent from './components/cv/MiCVComponent'
 function App() {
 
   const data = {
+    banner:"https://wallpapercave.com/wp/wp4365677.jpg",
     personal: {
       name: "Pechugas",
       lastName: "Laru",
@@ -19,23 +20,23 @@ function App() {
     },
     experience: [
       {
-        title:"tituloX",
-        company:"Empresa1",
+        title:"Titulo X",
+        company:"Empresa 1",
         description:"tareas blablabla",
         dateStart:"AAAA-MM",
         dateFinish:"AAAA-MM"
       },
       {
-        title:"tituloY",
-        company:"Empresa2",
-        description:"tareas blablabla",
+        title:"Titulo Y",
+        company:"Empresa  2",
+        description:"tareas bleblebleblebleble",
         dateStart:"AAAA-MM",
         dateFinish:"AAAA-MM"
       },
       {
         title:"tituloZ",
         company:"Empresa3",
-        description:"tareas blablabla",
+        description:"tareas blibliblibliblibli",
         dateStart:"AAAA-MM",
         dateFinish:"AAAA-MM"
       }

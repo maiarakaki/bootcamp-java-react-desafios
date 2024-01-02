@@ -2,7 +2,7 @@ import styles from './DatosPersonales.module.css';
 
 export const DatosPersonales = (props) => {
     return (
-        <>
+        <div className={styles.personalDataContainer}>
             {
                 props.personalInfo.name ?
                     <>
@@ -46,6 +46,6 @@ export const DatosPersonales = (props) => {
                     <></>
             }
 
-        </>
+        </div>
     );
 }
