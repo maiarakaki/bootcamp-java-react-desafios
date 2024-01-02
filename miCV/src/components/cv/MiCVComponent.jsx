@@ -3,12 +3,13 @@ import { EducacionComponent } from "../educacion/EducacionComponent"
 import { ExperienciaComponent } from "../experiencia/ExperienciaComponent"
 import { FotoComponent } from "../foto/FotoComponentComponent"
 
-export const MiCVComponent = () =>{
+function MiCVComponent(props){
+    console.log(props);
     return (
         <>
-        <FotoComponent />
+        <FotoComponent photo={props.data.photo}/>
         <hr/>
-        <DatosPersonales />
+        <DatosPersonales personalInfo={props.data.personal}/>
         <hr/>
         <EducacionComponent />
         <hr/>
@@ -16,3 +17,5 @@ export const MiCVComponent = () =>{
         </>
     )
 }
+
+export default MiCVComponent;

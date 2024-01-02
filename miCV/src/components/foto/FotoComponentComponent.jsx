@@ -1,7 +1,9 @@
-export const FotoComponent = () =>{
+import styles from './FotoComponentComponent.module.css'
+
+export const FotoComponent = (props) =>{
     return (
         <>
-        Foto Component
+            <img className= {styles.profilePic} src={props.photo} />
         </>
     )
 }
