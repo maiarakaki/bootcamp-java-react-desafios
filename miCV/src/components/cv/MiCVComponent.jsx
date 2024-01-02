@@ -4,9 +4,9 @@ import { ExperienciaLaboralComponent } from "../experiencia/ExperienciaLaboralCo
 import { FotoComponent } from "../foto/FotoComponentComponent"
 
 function MiCVComponent(props){
-    console.log(props);
     return (
         <>
+        <h1>Curriculum Vitae</h1>
         <FotoComponent photo={props.data.photo}/>
         <hr/>
         <DatosPersonales personalInfo={props.data.personal}/>

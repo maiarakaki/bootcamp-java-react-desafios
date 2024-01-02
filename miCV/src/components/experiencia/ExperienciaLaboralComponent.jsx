@@ -1,7 +1,6 @@
 import { ExperienciaComponent } from "./ExperienciaComponent"
 
 export const ExperienciaLaboralComponent = (props) => {
-    console.log(props);
     return (
         <>
             <h1>Experiencia Laboral</h1>
