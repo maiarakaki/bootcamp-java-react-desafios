@@ -11,9 +11,9 @@ function MiCVComponent(props){
         <hr/>
         <DatosPersonales personalInfo={props.data.personal}/>
         <hr/>
-        <EducacionComponent />
+        <EducacionComponent education={props.data.education}/>
         <hr/>
-        <ExperienciaComponent />
+        <ExperienciaComponent experience={props.data.experience}/>
         </>
     )
 }

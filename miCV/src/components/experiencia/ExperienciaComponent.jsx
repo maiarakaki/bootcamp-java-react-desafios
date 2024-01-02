@@ -1,4 +1,4 @@
-export const ExperienciaComponent = () =>{
+export const ExperienciaComponent = (props) =>{
     return (
         <>
             Experiencia component

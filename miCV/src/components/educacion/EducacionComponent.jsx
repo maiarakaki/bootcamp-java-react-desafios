@@ -1,7 +1,13 @@
-export const EducacionComponent =() => {
+export const EducacionComponent =(props) => {
     return (
         <>
-            Educacion
+            <h1>Educacion</h1>
+            <h2>Institucion</h2>
+            {props.education.institution}
+            <h2>Título</h2>
+            {props.education.degree}
+            <h2>Años</h2>
+            {props.education.years}
         </>
     );
 }
