@@ -3,6 +3,7 @@ import { Home } from "./home/Home";
 import { CrearTurno } from "./crear-turno/CrearTurno";
 import { ListadoTurno } from "./listar-turnos/ListadoTurno";
 import { Navbar } from "./navbar/Navbar";
+import { routes } from "./navbar/routes";
 
 export const AppRouter = () =>{
     return(
@@ -10,9 +11,9 @@ export const AppRouter = () =>{
         <BrowserRouter>
             <Navbar/>
             <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/crear" element={<CrearTurno/>}/>
-                <Route path="/listar" element={<ListadoTurno/>}/>
+                <Route path={routes.publicas.HOME} element={<Home/>}/>
+                <Route path={routes.publicas.CREATE} element={<CrearTurno/>}/>
+                <Route path={routes.publicas.LIST} element={<ListadoTurno/>}/>
             </Routes>
         </BrowserRouter>
         </>
