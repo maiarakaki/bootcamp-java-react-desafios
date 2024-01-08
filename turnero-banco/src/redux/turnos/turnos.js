@@ -1,7 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const turnosEmptyState = {
-    turnos:[]
+    turnos:[{
+        id:1,
+        tipo:"caja",
+        fecha: "ahora"
+    },
+    {
+        id:2,
+        tipo:"oficial", 
+        fecha:"despues"
+    }
+]
 };
 
 export const TurnosSlice = createSlice(
@@ -17,7 +27,7 @@ export const TurnosSlice = createSlice(
             eliminarTurno:(state, action)=>{
                 return {
                     ...state,
-                    turnos: state.turnos.filter(turno => turno.id !== action.payload)
+                    turnos: state.turnos.filter(turno => turno.id !== action.payload.id)
                   };
             },
             vaciarTurnos:() =>{

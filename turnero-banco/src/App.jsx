@@ -1,3 +1,4 @@
+import { Provider } from 'react-redux'
 import './App.css'
 import { AppRouter } from './AppRouter'
 import TurnosStore from './redux/store'
@@ -5,7 +6,7 @@ import TurnosStore from './redux/store'
 function App() {
 
   return (
-    <provi store={TurnosStore}>
+    <Provider store={TurnosStore}>
       <AppRouter />
     </Provider>
   )

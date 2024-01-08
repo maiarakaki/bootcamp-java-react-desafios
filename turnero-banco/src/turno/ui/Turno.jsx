@@ -1,36 +1,59 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {tiposTurno} from "../domain/tipos-turno";
-import { TurnoObject } from "../domain/turno-class"
+import SharedService from "../../listar-turnos/rxjs/shared-service";
+import { useDispatch } from "react-redux";
+import { eliminarTurno } from "../../redux/turnos/turnos";
 
 
 
 export const Turno = ()=>{
-    let trn= new TurnoObject(tiposTurno.ONLINE,"tipo", "fecha");
-    const [turno, setTurno] = useState(trn);
+    const [turno, setTurno] = useState(undefined);
+    const dispatcher = useDispatch();
+    let subscription;
+    useEffect(()=>{
+        subscription = SharedService.getSubject().subscribe(
+            data =>{
+                console.log(data);
+                setTurno(data);
+            }
+        );
 
-    // let turno = new TurnoObject(tiposTurno.ONLINE,"tipo", "fecha");
-    // turno["oficial"]= "oficial sarasa";
-    // turno["fechaProgramada"]= "fechaProgramada";
-    // turno["fechaFin"]= "fechaFin";
-    
+        return()=>{
+            subscription.unsubscribe();
+        }
+    },[]);
+
+    const finalizar = () =>{
+        dispatcher(eliminarTurno(turno));
+        SharedService.reset();
+    }
+
     return (
-        <div>
-            <h3>Turno <span>#</span></h3>
-            Sector: {turno.tipo}<br/>
-            Motivo de turno: {turno.motivo}<br/>
-            Fecha de turno: {turno.fecha}<br/>
-            { turno.tipo == tiposTurno.OFICIAL && 
-                <>
-                Oficial: {turno.oficial}
-                </>
-            }
+        <>
             {
-                turno.tipo == tiposTurno.ONLINE && 
-                <>
-                Fecha programada: {turno.fechaProgramada}<br/>
-                Fecha fin: {turno.fechaFin}
-                </>
+                turno ? 
+                <div>
+                    <h2>Atendido</h2>
+                    <h3>Turno <span>#{turno.id}</span></h3>
+                    Sector: {turno.tipo}<br/>
+                    Motivo de turno: {turno.motivo}<br/>
+                    Fecha de turno: {turno.fecha}<br/>
+                    { turno.tipo == tiposTurno.OFICIAL && 
+                        <>
+                        Oficial: {turno.oficial}
+                        </>
+                    }
+                    {
+                        turno.tipo == tiposTurno.ONLINE && 
+                        <>
+                        Fecha programada: {turno.fechaProgramada}<br/>
+                        Fecha fin: {turno.fechaFin}
+                        </>
+                    }
+                    <button onClick={finalizar} className='btn btn-danger'>Finalizar</button>
+                </div> : 
+                <></>
             }
-        </div>
+        </>
     )
 }
