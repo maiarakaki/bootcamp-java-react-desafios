@@ -7,10 +7,10 @@ const turnosEmptyState = {
 export const TurnosSlice = createSlice(
     {
         name:"turnos",
+        initialState:turnosEmptyState,
         reducers:{
             agregarTurno:(state,action) =>{
                 return {
-                    ...state,
                     turnos: [...state.turnos, action.payload]
                 };
             },
@@ -27,4 +27,4 @@ export const TurnosSlice = createSlice(
     }
 );
 
-export const { agregarTurno, eliminarTurno , vaciarTurnos} = turnosSlice.action;
+export const { agregarTurno, eliminarTurno , vaciarTurnos} = TurnosSlice.actions;

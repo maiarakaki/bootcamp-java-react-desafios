@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TurnosSlice } from "./turnos/turnos";
 
-const TurnosStore = configureStore(
+export const TurnosStore = configureStore(
     {
         reducer:{
             turnos: TurnosSlice.reducer

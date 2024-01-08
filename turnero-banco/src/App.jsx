@@ -5,7 +5,7 @@ import TurnosStore from './redux/store'
 function App() {
 
   return (
-    <Provider store={TurnosStore}>
+    <provi store={TurnosStore}>
       <AppRouter />
     </Provider>
   )
