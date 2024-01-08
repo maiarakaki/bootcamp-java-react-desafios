@@ -2,6 +2,7 @@ export const routes = {
     publicas: {
         HOME:'/',
         CREATE:'/crear',
-        LIST:'/listar'
+        LIST:'/lista-turno',
+        TURNO:'/turno'
     }
 }
