@@ -85,10 +85,8 @@ export const CrearTurno = () => {
                     </div>
                 </div>
                 <div className='col'>
-                    {/* <form> */}
 
                     <TurnoBaseForm />
-                    {/* </form> */}
                     {
                         tipoTurno === tiposTurno.OFICIAL &&
                         <TurnoOficialForm/>
