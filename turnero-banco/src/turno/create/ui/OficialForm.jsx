@@ -11,7 +11,6 @@ export const TurnoOficialForm = () =>{
     const dispatcher = useDispatch();
 
     useEffect(()=>{
-        // dispatcher(limpiarTurno());
         dispatcher(modificarTurno({tipo: tiposTurno.OFICIAL}));
     },[]);
     

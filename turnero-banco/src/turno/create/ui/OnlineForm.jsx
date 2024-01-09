@@ -3,7 +3,7 @@ import { SharedFormData } from "../../../listar-turnos/rxjs/shared-service";
 import { getDate } from "../utils/getDate";
 import { tiposTurno } from "../../domain/tipos-turno";
 import { useDispatch } from "react-redux";
-import { limpiarTurno, modificarTurno } from "../../../redux/turnos/turno";
+import { modificarTurno } from "../../../redux/turnos/turno";
 
 export const TurnoOnlineForm = () =>{
     const dateRef = useRef();
@@ -14,7 +14,6 @@ export const TurnoOnlineForm = () =>{
     }
 
     useEffect(()=>{
-        // dispatcher(limpiarTurno());
         dispatcher(modificarTurno({tipo: tiposTurno.ONLINE}));
     },[]);
 
