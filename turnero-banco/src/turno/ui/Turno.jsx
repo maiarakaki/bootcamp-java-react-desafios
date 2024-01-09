@@ -3,6 +3,7 @@ import {tiposTurno} from "../domain/tipos-turno";
 import { SharedService } from "../../listar-turnos/rxjs/shared-service";
 import { useDispatch } from "react-redux";
 import { eliminarTurno } from "../../redux/turnos/turnos";
+import { getDate } from "../create/utils/getDate";
 
 
 
@@ -31,7 +32,7 @@ export const Turno = ()=>{
         <>
             {
                 turno ? 
-                <div>
+                <div className="d-flex flex-column">
                     <h2>Atendido</h2>
                     <h3>Turno <span>#{turno.id}</span></h3>
                     Sector: {turno.tipo}<br/>
@@ -45,8 +46,8 @@ export const Turno = ()=>{
                     {
                         turno.tipo == tiposTurno.ONLINE && 
                         <>
-                        Fecha programada: {turno.fechaProgramada}<br/>
-                        Fecha fin: {turno.fechaFin}
+                        Fecha programada: {turno.dateScheduled}<br/>
+                        Fecha fin: {getDate()}
                         </>
                     }
                     <button onClick={finalizar} className='btn btn-danger'>Finalizar</button>

@@ -5,6 +5,7 @@ export const getDate = () =>{
     let day = date.getDate();
     let hour = date.getHours();
     let minutes = date.getMinutes();
+    minutes = minutes < 10 ? `0${minutes}` : minutes;
     let dateString = `${day}/${month}/${year} ${hour}:${minutes}`
     return dateString;
 }

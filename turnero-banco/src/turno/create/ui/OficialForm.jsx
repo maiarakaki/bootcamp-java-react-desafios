@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { SharedFormData } from "../../../listar-turnos/rxjs/shared-service";
 import { tiposTurno } from "../../domain/tipos-turno";
 import { useDispatch } from "react-redux";
-import { limpiarTurno, modificarTurno } from "../../../redux/turnos/turno";
+import { modificarTurno } from "../../../redux/turnos/turno";
 
 
 export const TurnoOficialForm = () =>{

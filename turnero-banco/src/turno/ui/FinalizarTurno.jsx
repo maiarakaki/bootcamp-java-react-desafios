@@ -5,7 +5,6 @@ export const FinalizarTurno = () =>{
     useEffect(()=>{
         subscription.subscribe(
             data =>{
-                console.log(data);
                 setTurno(data);
             }
         );
@@ -22,6 +21,9 @@ export const FinalizarTurno = () =>{
 
 
     return (
-        <button onClick={finalizar} className='btn btn-danger'>Finalizar</button>
+        <button onClick={finalizar} 
+            className='btn btn-danger'>
+                Finalizar
+        </button>
     )
 }

@@ -1,6 +1,6 @@
 import {useEffect, useState } from "react";
 import { tiposTurno } from "../../domain/tipos-turno";
-import { useDispatch, useSelector, useStore } from "react-redux";
+import { useDispatch } from "react-redux";
 import { limpiarTurno, modificarTurno } from "../../../redux/turnos/turno";
 import { TurnoBaseForm } from "./BaseForm";
 import { SharedFormData } from "../../../listar-turnos/rxjs/shared-service";
