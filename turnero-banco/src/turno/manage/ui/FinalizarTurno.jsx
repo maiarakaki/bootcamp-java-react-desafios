@@ -1,16 +1,16 @@
 export const FinalizarTurno = () =>{
 
     const dispatcher = useDispatch();
-    const subscription = SharedService.getSubject();
+    let subscription;
     useEffect(()=>{
-        subscription.subscribe(
+        subscription.getSubject();subscribe(
             data =>{
                 setTurno(data);
             }
         );
 
         return()=>{
-            //subscription.unsubscribe();
+            subscription.unsubscribe();
         }
     },[]);
 
