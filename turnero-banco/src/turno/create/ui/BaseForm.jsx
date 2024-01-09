@@ -10,9 +10,7 @@ export const TurnoBaseForm = ()=>{
     const dispatcher = useDispatch();
 
     useEffect(()=>{
-        // dispatcher(limpiarTurno());
         dispatcher(modificarTurno({tipo:tiposTurno.CAJA}));
-        console.log("estoy en base form...")
     },[]);
 
     const handleChange = ()=>{
