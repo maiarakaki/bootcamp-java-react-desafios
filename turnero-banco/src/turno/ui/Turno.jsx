@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {tiposTurno} from "../domain/tipos-turno";
-import SharedService from "../../listar-turnos/rxjs/shared-service";
+import { SharedService } from "../../listar-turnos/rxjs/shared-service";
 import { useDispatch } from "react-redux";
 import { eliminarTurno } from "../../redux/turnos/turnos";
 
@@ -13,7 +13,6 @@ export const Turno = ()=>{
     useEffect(()=>{
         subscription = SharedService.getSubject().subscribe(
             data =>{
-                console.log(data);
                 setTurno(data);
             }
         );
@@ -37,7 +36,7 @@ export const Turno = ()=>{
                     <h3>Turno <span>#{turno.id}</span></h3>
                     Sector: {turno.tipo}<br/>
                     Motivo de turno: {turno.motivo}<br/>
-                    Fecha de turno: {turno.fecha}<br/>
+                    Fecha de turno: {turno.fechaTurno}<br/>
                     { turno.tipo == tiposTurno.OFICIAL && 
                         <>
                         Oficial: {turno.oficial}

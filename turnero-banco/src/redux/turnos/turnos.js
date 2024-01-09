@@ -1,16 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const turnosEmptyState = {
-    turnos:[{
-        id:1,
-        tipo:"caja",
-        fecha: "ahora"
-    },
-    {
-        id:2,
-        tipo:"oficial", 
-        fecha:"despues"
-    }
+    turnos:[
 ]
 };
 

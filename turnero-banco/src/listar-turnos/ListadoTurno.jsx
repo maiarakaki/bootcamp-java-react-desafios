@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import SharedService from "./rxjs/shared-service";
+import { SharedService } from "./rxjs/shared-service";
 import { Turno } from "../turno/ui/Turno";
 
 export const ListadoTurno = () => {
@@ -19,7 +19,7 @@ export const ListadoTurno = () => {
           <h2>En espera</h2>
             {turnos.map( turno=> (
               <div className="turnoItem" key={turno.id}>
-                Tipo: {turno.tipo} | fecha {turno.fecha}
+                Tipo: {turno.tipo} | fecha {turno.fechaTurno}
                 <button onClick={()=>showModal(turno)}>Atender</button>
               </div>
             )
