@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import { SharedService } from "./rxjs/shared-service";
-import { Turno } from "../turno/ui/Turno";
+import { SharedService } from "../rxjs/shared-service";
+import { Turno } from "../turno/manage/ui/Turno";
 
 export const ListadoTurno = () => {
     

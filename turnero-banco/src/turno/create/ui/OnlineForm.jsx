@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { SharedFormData } from "../../../listar-turnos/rxjs/shared-service";
+import { SharedFormData } from "../../../rxjs/shared-service";
 import { getDate } from "../utils/getDate";
 import { tiposTurno } from "../../domain/tipos-turno";
 import { useDispatch } from "react-redux";

@@ -3,7 +3,7 @@ import { tiposTurno } from "../../domain/tipos-turno";
 import { useDispatch } from "react-redux";
 import { limpiarTurno, modificarTurno } from "../../../redux/turnos/turno";
 import { TurnoBaseForm } from "./BaseForm";
-import { SharedFormData } from "../../../listar-turnos/rxjs/shared-service";
+import { SharedFormData } from "../../../rxjs/shared-service";
 import { TurnoOficialForm } from "./OficialForm";
 import { TurnoOnlineForm } from "./OnlineForm";
 import { agregarTurno } from "../../../redux/turnos/turnos";

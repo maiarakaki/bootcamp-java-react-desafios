@@ -4,7 +4,6 @@ import { CrearTurno } from "./turno/create/ui/CrearTurno";
 import { ListadoTurno } from "./listar-turnos/ListadoTurno";
 import { Navbar } from "./navbar/Navbar";
 import { routes } from "./navbar/routes";
-import { Turno } from "./turno/ui/Turno";
 
 export const AppRouter = () =>{
     return(
@@ -15,7 +14,6 @@ export const AppRouter = () =>{
                 <Route path={routes.publicas.HOME} element={<Home/>}/>
                 <Route path={routes.publicas.CREATE} element={<CrearTurno/>}/>
                 <Route path={routes.publicas.LIST} element={<ListadoTurno/>}/>
-                <Route path={routes.publicas.TURNO} element={<Turno/>}/>
             </Routes>
         </BrowserRouter>
         </>

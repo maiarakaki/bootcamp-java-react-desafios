@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import {tiposTurno} from "../domain/tipos-turno";
-import { SharedService } from "../../listar-turnos/rxjs/shared-service";
+import {tiposTurno} from "../../domain/tipos-turno";
+import { SharedService } from "../../../rxjs/shared-service";
 import { useDispatch } from "react-redux";
-import { eliminarTurno } from "../../redux/turnos/turnos";
-import { getDate } from "../create/utils/getDate";
+import { eliminarTurno } from "../../../redux/turnos/turnos";
+import { getDate } from "../../create/utils/getDate";
 
 
 
